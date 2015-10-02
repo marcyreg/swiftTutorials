@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReadFilie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smI-Zs-pmp">
+                                <rect key="frame" x="138" y="47" width="325" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="mea-lB-Xlk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESU-mA-PKo">
+                                <rect key="frame" x="283" y="85" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onSaveFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v8N-z7-nnD"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zde-tn-63R">
+                                <rect key="frame" x="146" y="198" width="309" height="203"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="wlp-Xv-QlC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ESU-mA-PKo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="77H-b8-V0K"/>
+                            <constraint firstItem="ESU-mA-PKo" firstAttribute="centerX" secondItem="smI-Zs-pmp" secondAttribute="centerX" id="8Nw-rK-IuQ"/>
+                            <constraint firstItem="Zde-tn-63R" firstAttribute="centerX" secondItem="ESU-mA-PKo" secondAttribute="centerX" id="Ecn-up-3fy"/>
+                            <constraint firstItem="smI-Zs-pmp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="Jcc-cR-OO9"/>
+                            <constraint firstItem="Zde-tn-63R" firstAttribute="top" secondItem="ESU-mA-PKo" secondAttribute="bottom" constant="83" id="O8b-cm-brJ"/>
+                            <constraint firstItem="Zde-tn-63R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sfx-Ud-VD1"/>
+                            <constraint firstItem="ESU-mA-PKo" firstAttribute="top" secondItem="smI-Zs-pmp" secondAttribute="bottom" constant="8" symbolic="YES" id="jDZ-8Q-zdX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fileContents" destination="Zde-tn-63R" id="LIl-f4-hqv"/>
+                        <outlet property="miniNote" destination="smI-Zs-pmp" id="WDx-aM-agC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="339"/>
+        </scene>
+    </scenes>
+</document>
